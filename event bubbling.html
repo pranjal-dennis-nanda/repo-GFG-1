@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Grandparent{
+            height: 150px;
+            width: 150px;
+            border: 2px solid red;
+        }
+        .parent{
+            height: 100px;
+            width: 100px;
+            border: 2px solid blue;
+        }
+        .child{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+ <div class="Grandparent">
+    Grandparent
+    <div class="parent">
+        parent
+        <div class="child">
+            child
+        </div>
+    </div>
+ </div>   
+ <script>
+    let grandParent=document.querySelector(".Grandparent");
+let parent=document.querySelector(".parent");
+let child=document.querySelector(".child");
+grandParent.addEventListener("click",function(e)
+{
+
+    console.log("grandparent is clicked");
+},{capture:true});
+parent.addEventListener("click",function(e)
+{
+    console.log("parent is clicked");
+},{capture:true});
+child.addEventListener("click",function(e)
+{
+    console.log("child is clicked");
+},{capture:true});
+localStorage.setItem("theme","dark");
+localStorage.setItem("Theme","light");
+let localdata=localStorage.getItem("theme");
+console.log(localdata);
+sessionStorage.setItem("name","pranjal");
+sessionStorage.setItem("names","pranjalns");
+window.onload=function()
+{
+    sessionStorage.setItem("name","pranjal");
+sessionStorage.setItem("names","pranjalns");
+    
+}
+window.onload=function()
+{
+sessionStorage.clear();
+}
+</script>
+</body>
+</html>

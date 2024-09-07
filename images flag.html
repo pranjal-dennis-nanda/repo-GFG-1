@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/box5_image (1).jpg" alt="" id="images">
+    <button id="btn">click me</button>
+
+    <script>
+        let images=document.getElementById('images');
+        let flag=true;
+        let btnss=document.getElementById('btn');
+        btnss.addEventListener("click",function(){
+
+        if(flag===true)
+{
+    images.src="images/box8_image (1).jpg";
+}
+else{
+    images.src="images/box5_image (1).jpg";
+}
+flag=!flag;
+        })
+    </script>
+</body>
+</html>

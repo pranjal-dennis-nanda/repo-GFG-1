@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricbuzz</title>
+    <style>
+        body{
+            background-color:lightblue;
+        }
+        .square{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            opacity: 0;
+            transform: scale(0);
+            transition: 2s all ease;
+        }
+        .circle{
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: 2s all ease;
+        }
+        #container{
+            display: flex;
+            justify-content: space-between;
+flex-wrap: wrap;
+margin-top: 70px;
+
+        }
+        #input1,#input2,#input3,#btn{
+            margin: 70px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <input type="number" id="input1">
+    <select  id="input2">
+        <option value="square">Square</option>
+        <option value="circle">Circle</option>
+    </select>
+    <input type="color" id="input3">
+    <button id="btn">Add</button>
+   
+    <div id="container">
+
+    </div>
+    <script src="location.js"></script>
+
+
+</body>
+</html>
